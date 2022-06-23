@@ -772,12 +772,12 @@ transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
          background-color: var(--background-color);
          border: 1px solid rgba(0, 0, 0, 0.1);
          border-radius: 50%;
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .close-button:hover, 
     .close-button:focus {
-        fill: var(--accent-color);
-        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);}
+        fill: var(--accent-color);}
 
    
 
@@ -802,13 +802,17 @@ transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
         height: 40px;
         outline: none;
         padding-left: 42px;
+
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
      }
 
 
 
-     .form-field:focus-within .input-box,
-     .form-field:hover .input-box {border: 1px solid #2196F3;
-    cursor: pointer;}
+     .form-field:focus-within .input-box
+      {border: 1px solid #2196F3;
+    }
+
+        /* .form-field:hover .input-box */
 
      /* .form-field label {
         margin-bottom: 4px;
@@ -832,13 +836,15 @@ transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
         position: absolute;
         top: 28px;
         left: 12px;
-     }
-
-    .form-field:focus-within .name-icon,
-     .form-field:hover .name-icon {
-        fill: var(--accent-color);
         transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
      }
+
+    .form-field:focus-within .name-icon
+     {
+        fill: var(--accent-color);
+     }
+
+          /* .form-field:hover .name-icon */
 
      .form-name {
         margin-bottom: 4px;
@@ -884,6 +890,7 @@ transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
    }
 
+
    .checkbox {
     appearance: none;
     position: absolute;
@@ -891,6 +898,9 @@ transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
    .checkbox-frame {opacity: 1;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);}
+
+    .checkbox:focus + .checkbox-frame
+    {box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);}
 
    .checkbox:checked + .checkbox-frame {opacity: 0;}
 
@@ -917,7 +927,10 @@ transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
     text-decoration-line: underline;
     color: #2196F3;
     margin-left: 4px;
+    font-size: 14px;
    }
+
+   .agreement-link:hover {text-decoration-line:none}
 
 
    .button-send {
@@ -942,12 +955,14 @@ transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
         border-radius: 4px;
         border: none;
+     cursor: pointer;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
    }
 
 
    .button-send:hover,
    .button-send:focus {background: #188CE8;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);}
+   }
 
 
